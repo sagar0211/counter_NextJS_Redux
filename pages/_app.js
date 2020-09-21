@@ -1,27 +1,23 @@
 import React from 'react'
 import App from 'next/app';
-import {Provider} from 'react-redux';
-import withRedux from "next-redux-wrapper";
-import store from '../redux/store';
+import { useDispatch,useSelector } from 'react-redux';
+import {decrementCounter, incrementCounter} from '../redux/actions/counterActions';
 
-class MyApp extends App{
-    static async getInitialProps({Component, ctx}) {
-        const pageProps = Component.getInitialProps ? await Component.getInitialProps(ctx) : {};
 
-        return {pageProps: pageProps};
-    }
+export const MyApp = ({}) => {
+    const {counter} = useSelector((state) =>{
+        const {counter} = state;
+        return {counter}
 
-    render(){
-        const {Component, pageProps, store} = this.props;
+    });
+    const dispatch = useDispatch();
 
-        return(
-            <Provider store = {store}>
-                <Component {...pageProps} />
-            </Provider>
-        );
-    }
+    return (
 
+        <div>
+            <button onClick={() => {dispatch(incrementCounter())}}>Increment</button>
+            <h1>{counter.value}</h1>
+            <button onClick={() => {dispatch(decrementCounter())}}>Decrement</button>
+        </div>
+    )
 }
-const makeStore = () => store;
-
-export default withRedux(makeStore)(MyApp);
