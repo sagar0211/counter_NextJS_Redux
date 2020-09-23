@@ -10,5 +10,5 @@ export const incrementCounter = () => ({
 //DECREMENT action created
 export const decrementCounter = () => ({
     type: DECREMENT_COUNTER,
-    payload: 1,
+    payload: 1
 });

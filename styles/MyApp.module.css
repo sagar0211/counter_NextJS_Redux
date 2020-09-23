@@ -1,0 +1,60 @@
+.MyApp{
+    margin:0px;
+}
+
+.head{
+    font-size: 60px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:black;
+    text-align: center;
+    background-color:   lightsteelblue  ;
+}
+    
+.inc,.dec{
+    margin:auto;
+    background-color:cadetblue;
+    color:black;
+    padding: 10px 35px;
+    padding-top: 10px;
+    font-size: 40px;
+    display:flex ;
+    justify-content:center;
+    border: 2px dotted black;
+}
+
+.inc:hover{
+    background-color: orangered;
+}
+.dec:hover{
+    background-color:orange;
+}
+.foot{
+    font-size: 75px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-top: 1px solid #eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:black;
+    text-align: center;
+    background-color:  lightsteelblue ;
+}
+
+.show{
+    text-align:center;
+    color:black;
+    font-size: xx-large;
+}
+
+.tab{
+    margin:auto;
+    background-color: lavenderblush;
+}
+
+
+
+
